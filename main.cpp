@@ -1,7 +1,7 @@
 /*
 Kirti Kshirsagar | 9th March 2024
 Project-4 : Calibration and Augmented Reality
-This is the main file for checkerboard.png, Detect and Extract Target Corners from Checkerboard Image.
+This is the main file for Detecting and Extracting Target Corners from Checkerboard Image.
 */
 #include <opencv2/opencv.hpp>
 #include <vector>
