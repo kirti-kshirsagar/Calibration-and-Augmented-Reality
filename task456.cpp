@@ -17,9 +17,18 @@ int main() {
         std::cerr << "Failed to open intrinsic parameters file." << std::endl;
         return -1;
     }
-    cv::Mat camera_matrix, distortion_coeffs;
+    cv::Mat camera_matrix;
+    std::vector<double> distortion_coeffs;
+    
     fs["Camera_Matrix"] >> camera_matrix;
+    fs["Distortion_Coefficients"] >> distortion_coeffs;
     fs.release();
+
+    // Convert the distortion coefficients vector to an OpenCV matrix
+    cv::Mat distortion_coeffs_mat(1, distortion_coeffs.size(), CV_64F);
+    for (size_t i = 0; i < distortion_coeffs.size(); ++i) {
+        distortion_coeffs_mat.at<double>(0, i) = distortion_coeffs[i];
+    }
 
     cv::VideoCapture cap(0); // Open the default camera
     if (!cap.isOpened()) { // Check if we succeeded

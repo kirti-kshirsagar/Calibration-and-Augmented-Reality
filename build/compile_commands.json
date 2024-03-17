@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/media/sakiran/Internal/2nd Semester/PRCV/Calibration-and-Augmented-Reality/build",
+  "command": "/usr/bin/g++  -isystem /usr/local/include/opencv4 -g -o CMakeFiles/Calibration-and-Augmented-Reality.dir/task456.cpp.o -c \"/media/sakiran/Internal/2nd Semester/PRCV/Calibration-and-Augmented-Reality/task456.cpp\"",
+  "file": "/media/sakiran/Internal/2nd Semester/PRCV/Calibration-and-Augmented-Reality/task456.cpp"
+}
+]

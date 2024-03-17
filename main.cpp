@@ -67,7 +67,7 @@ int main() {
             corner_list.push_back(corners);
             point_list.push_back(point_set);
             // Saving calibration images
-            cv::imwrite("D:/PRCV/Calibration-and-Augmented-Reality/calibrationImg/calibration_frame_" + std::to_string(corner_list.size()) + ".jpg", frame);
+            cv::imwrite("/media/sakiran/Internal/2nd Semester/PRCV/Calibration-and-Augmented-Reality/calibrationImg/calibration_frame_" + std::to_string(corner_list.size()) + ".jpg", frame);
             std::cout << "Saved current frame's corner data." << std::endl;
         }
         // Calibrate the Camera
@@ -108,13 +108,13 @@ int main() {
             std::cout << "Final Re-projection Error: " << reprojection_error << std::endl;
 
             // Save intrinsic parameters to a file
-            cv::FileStorage fs("D:/PRCV/Calibration-and-Augmented-Reality/intrinsic_parameters.yml", cv::FileStorage::WRITE);
+            cv::FileStorage fs("/media/sakiran/Internal/2nd Semester/PRCV/Calibration-and-Augmented-Reality/intrinsic_parameters.yml", cv::FileStorage::WRITE);
             fs << "Camera_Matrix" << camera_matrix;
             fs << "Distortion_Coefficients" << distortion_coeffs;
             fs.release();
 
             // Save rotations and translations to a file
-            cv::FileStorage fs_rot_trans("D:/PRCV/Calibration-and-Augmented-Reality/rotations_translations.yml", cv::FileStorage::WRITE);
+            cv::FileStorage fs_rot_trans("/media/sakiran/Internal/2nd Semester/PRCV/Calibration-and-Augmented-Reality/rotations_translations.yml", cv::FileStorage::WRITE);
             fs_rot_trans << "Rotations" << rotations;
             fs_rot_trans << "Translations" << translations;
             fs_rot_trans.release();
