@@ -8,7 +8,7 @@ set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};G:/opencv/opencv/build/x64/vc16/lib/
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(Calibration-and-Augmented-Reality rough.cpp)
+add_executable(Calibration-and-Augmented-Reality task456.cpp)
 target_link_libraries(Calibration-and-Augmented-Reality PRIVATE ${OpenCV_LIBS})
 
 
