@@ -1,3 +1,8 @@
+/*
+Saikiran Juttu & Kirti Kshirsagar | 18th March 2024
+Project-4 : Calibration and Augmented Reality
+This program detects and shows Robust Features such as Harris corners in a live camera feed.
+*/
 #include <iostream>
 #include <opencv2/opencv.hpp>
 using namespace cv;
@@ -38,6 +43,8 @@ int main() {
             for (int j = 0; j < dst_norm.cols; j++) {
                 if (static_cast<int>(dst_norm.at<float>(i, j)) > threshold) {
                     circle(frame, Point(j, i), 5, Scalar(0, 0, 255), 2, 8, 0);
+                    //rectangle(frame, Point(j - 5, i - 5), Point(j + 5, i + 5), Scalar(0, 0, 255), 2, 8, 0);
+
                 }
             }
         }
