@@ -28,7 +28,7 @@ int main() {
 
     // Convert the distortion coefficients vector to an OpenCV matrix
     cv::Mat distortion_coeffs_mat(1, distortion_coeffs.size(), CV_64F);
-    for (size_t i = 0; i < distortion_coeffs.size(); ++i) {
+    for (size_t i = 0; i < distortion_coeffs.size(); i++) {
         distortion_coeffs_mat.at<double>(0, i) = distortion_coeffs[i];
     }
 
@@ -60,7 +60,7 @@ int main() {
         cv::Size chessboardSize(9, 6); // The size of the chessboard (9x6)
 
         // Define square size
-        float squareSize = 1.0f; // Example: 1.0 unit (e.g., 1 centimeter)
+        float squareSize = 1.0f; // 1.0 unit
 
         // Initialize vector to store object points
         std::vector<cv::Point3f> objectPoints;
@@ -95,7 +95,7 @@ int main() {
         while (true) {
             cv::Mat frame;
             cap >> frame; // Capture a new frame
-            if (frame.empty()) break; // Check if we succeeded
+            if (frame.empty()) break; 
 
             // Undistort the frame
             cv::Mat undistorted;
@@ -105,7 +105,7 @@ int main() {
             cv::Mat gray;
             cv::cvtColor(undistorted, gray, cv::COLOR_BGR2GRAY);
 
-            // Detect target (e.g., another chessboard)
+            // Detect target
             std::vector<cv::Point2f> corners;
             bool found = cv::findChessboardCorners(gray, chessboardSize, corners);
 
