@@ -20,6 +20,7 @@ int main() {
     int apertureSize = 3;
     double k = 0.04;
     int threshold = 150;
+    //int threshold = 200;
 
     Mat frame, grayFrame, dst, dst_norm, dst_norm_scaled;
     while (true) {

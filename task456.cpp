@@ -76,20 +76,27 @@ int main() {
         }
         // Define 3D points for designing a virtual object
         std::vector<cv::Point3f> designPoints;
-        designPoints.push_back(cv::Point3f(1, 0, 0));        
-        designPoints.push_back(cv::Point3f(0, 0, -10));       
-        designPoints.push_back(cv::Point3f(2, 0, -2));        
-        designPoints.push_back(cv::Point3f(2, 0, -8));     
-        designPoints.push_back(cv::Point3f(4, 0, -2));       
-        designPoints.push_back(cv::Point3f(4, 0, -8));     
-        designPoints.push_back(cv::Point3f(0, 2, -2));        
-        designPoints.push_back(cv::Point3f(0, 2, -8));        
-        designPoints.push_back(cv::Point3f(0, 4, -2));     
-        designPoints.push_back(cv::Point3f(0, 4, -8));       
+        designPoints.push_back(cv::Point3f(1, 1, 0));      
+        designPoints.push_back(cv::Point3f(4, 1, 0));    
+        designPoints.push_back(cv::Point3f(4, 4, 0));      
+        designPoints.push_back(cv::Point3f(1, 4, 0));    
+        designPoints.push_back(cv::Point3f(1, 2, 0));   
+        designPoints.push_back(cv::Point3f(3, 2, 0));     
+        designPoints.push_back(cv::Point3f(3, 3, 0));       
+        designPoints.push_back(cv::Point3f(1, 3, 0));     
+        designPoints.push_back(cv::Point3f(1, 1, -2));      
+        designPoints.push_back(cv::Point3f(4, 1, -2));      
+        designPoints.push_back(cv::Point3f(4, 4, -2));        
+        designPoints.push_back(cv::Point3f(1, 4, -2));     
+        designPoints.push_back(cv::Point3f(1, 2, -2));      
+        designPoints.push_back(cv::Point3f(3, 2, -2));     
+        designPoints.push_back(cv::Point3f(3, 3, -2));       
+        designPoints.push_back(cv::Point3f(1, 3, -2));      
         // Define lines connecting points to form the design
         std::vector<std::pair<int, int>> designLines = {
-            {0, 1}, {0, 2}, {0, 4}, {1, 3}, {1, 5}, {2, 3}, {2, 4}, {3, 5}, {4, 5},
-        {2, 6}, {3, 7}, {4, 8}, {5, 9}, {6, 7}, {6, 8}, {7, 9}, {8, 9}
+            {0, 1}, {1, 2}, {2, 3}, {0, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 3}, {8, 9},
+        {9, 10}, {10, 11}, {8, 12}, {12, 13}, {13, 14}, {14, 15}, {15, 11}, {0, 8},
+        {1, 9}, {2, 10}, {3, 11}, {4, 12}, {5, 13}, {6, 14}, {7, 15}
         };
 
         while (true) {
