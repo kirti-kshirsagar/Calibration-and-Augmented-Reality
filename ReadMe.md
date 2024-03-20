@@ -5,7 +5,7 @@ Name - **KIRTI KSHIRSAGAR** & **SAIKIRAN JUTTU**
 - Using 1 Time Travel Day (submitting on 19th March 2024)
 - Extension : Keypress 'p' activates the pre-captured video containing the target.
 
-## This is a Readme file for main.cpp, task456.cpp, task7.cpp, multiple.cpp file and overlay.cpp, this includes all the details that are necessary to run the program.
+## This is a Readme file for main.cpp, task456.cpp, task7.cpp, multiple.cpp and overlay.cpp files, this includes all the details that are necessary to run the program.
 
 The main.cpp file contains tasks from 1 to 3, task456.cpp file contains tasks from 4 to 6 and task 7 is present in task7.cpp. The multiple.cpp file contains the extension where our system can detect and create virtual objects on multiple targets in the frame. The overlay.cpp contains the extension to not only add a virtual object, but also overlay an image to the target to make it not look like a target any more. 
 
