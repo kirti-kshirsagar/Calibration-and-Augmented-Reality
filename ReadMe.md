@@ -36,7 +36,7 @@ For the extensions, we have done the following tasks:
 - Task 3 : Get your system working with multiple targets in the scene.
     * For this task,We have successfully implemented our system to function with multiple checkerboards in the frame. Utilizing checkerboards of sizes (9,6) and (6,6).
 - Task 4 : Not only add a virtual object, but also do something to the target to make it not look like a target any more.
-    * In this task, we detected the extreme corners of the checkerboard and superimposed an image within that region
+    * In this task, we detected the extreme corners of the checkerboard and superimposed an image within that region.
 
 
  
